@@ -8,9 +8,9 @@ function moveBackground(event) {
     const y = event.clientY * scaleFactor;
     
     for (let i = 0; i < shapes.length; i++) {
-        const is0dd = i % 2 === 0;
+        const is0dd = i % 2 !== 0;
         const boolInt = is0dd ? -1 : 1;
-        shapes[i].style.transform = `translate(${x * boolInt}px, ${y * boolInt}px)`
+        shapes[i].style.transform = `translate(${x * boolInt}px, ${y * boolInt}px) rotate(${x * boolInt * 10}deg)`
     }
 }
 
